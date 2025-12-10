@@ -6,9 +6,9 @@ data = pd.read_csv('/Users/josephmutui/Desktop/LuxDev/Python-class/crypto-classi
 data["future_return"] = data["close"].pct_change().shift(-1)
 
 def label(row):
-  if row["future_return"] > 0.04:
+  if row["future_return"] > 0.02:
         return 2
-  elif row["future_return"] < -0.06:
+  elif row["future_return"] < -0.02:
         return 0
   else:
         return 1
